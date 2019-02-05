@@ -1,28 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Header from './components/header/Header';
+import Landing from './components/landing/Landing';
+import House from './components/house/House';
+import Patronus from './components/patronus/Patronus';
+import Wand from './components/wand/Wand';
+import Sorting from './components/sorting/Sorting';
 
 class App extends Component {
   render() {
+    const { house } = this.props;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <Header house={house}></Header>
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/house' render={() => (
+            <House house={house}></House>
+          )}/>
+          <Route exact path='/patronus' component={Patronus} />
+          <Route exact path='/wand' component={Wand} />
+          <Route exact path='/sorting' component={Sorting} />
+          <Route render={() => <h1 className='heading__primary' style={{marginTop: '10rem'}}>404 NOT FOUND</h1>}></Route>
+        </Switch>
+      </React.Fragment>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    house: state.house
+  };
+};
+
+const mapDispatchToProps = () => {
+  return {};
+};
+
+App.propTypes = {
+  house: PropTypes.string
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

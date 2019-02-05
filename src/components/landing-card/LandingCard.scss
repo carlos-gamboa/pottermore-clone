@@ -1,0 +1,86 @@
+@import '../../index.scss';
+
+.landing-card {
+  height: 20rem;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: .93rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: .87rem;
+    letter-spacing: 1.5px;
+    margin-bottom: .93rem;
+
+    color: $color-white;
+    font-family: $font-family-secondary;
+  }
+
+  &__value {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 10%;
+    text-transform: uppercase;
+    font-size: .93rem;
+    padding: .62rem 3.75rem;
+    color: $color-white;
+    font-family: $font-family-secondary;
+    background-color: $color-default-dark;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: $color-default-dark-2;
+    }
+
+    &--ravenclaw {
+      background-color: $color-ravenclaw-dark;
+
+      &:hover {
+        background-color: $color-ravenclaw-dark-2;
+      }
+    }
+
+    &--hufflepuff {
+      background-color: $color-hufflepuff-dark;
+
+      &:hover {
+        background-color: $color-hufflepuff-dark-2;
+      }
+    }
+
+    &--gryffindor {
+      background-color: $color-gryffindor-dark;
+
+      &:hover {
+        background-color: $color-gryffindor-dark-2;
+      }
+    }
+
+    &--slytherin {
+      background-color: $color-slytherin-dark;
+
+      &:hover {
+        background-color: $color-slytherin-dark-2;
+      }
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 1.56rem;
+  }
+}

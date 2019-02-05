@@ -1,0 +1,38 @@
+@import '../../index.scss';
+
+.quiz {
+  display: flex;
+  width: 100%;
+  min-height: 60vh;
+
+  &__question-container {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+
+    background-position: center;
+    background-size: cover;
+
+    transition: background-image .3s ease;
+  }
+
+  &__answer-container {
+    padding: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    
+    transition: background-color .3s ease;
+  }
+
+  &__question {
+    color: $color-white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+}

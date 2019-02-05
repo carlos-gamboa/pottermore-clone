@@ -1,0 +1,95 @@
+@import '../../index.scss';
+
+.house {
+
+  background-color: $color-default-secondary;
+  color: $color-white;
+
+  &__container {
+    display: flex;
+    min-height: 60vh;
+  }
+
+  &__title-container {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1.25rem;
+  }
+
+  &__title {
+    font-size: 2.18rem;
+    font-weight: 300;
+  }
+
+  &__middle-container {
+    flex: 1 1 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__middle-text {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: ' ';
+      flex-basis: 45%;
+      width: 0;
+      height: 45%;
+      border: 1px solid $color-white;
+      margin: 1.25rem 0;
+    }
+
+  }
+
+  &__ceremony-container {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  &__ceremony-title {
+    font-size: 2.18rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1.25rem;
+  }
+
+  &__ceremony-text {
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3.12rem;
+  }
+
+  &__button {
+    padding: .53rem 1.25rem;
+    box-shadow: none;
+    border: 1px solid $color-white;
+    background-color: transparent;
+    color: $color-white;
+    text-transform: uppercase;
+    font-family: $font-family-secondary;
+    font-size: .93rem;
+    cursor: pointer;
+    transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+
+    &:hover {
+      background-color: $color-white;
+      border-color: $color-black;
+      color: $color-black;
+    }
+  }
+}

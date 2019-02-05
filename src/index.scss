@@ -1,0 +1,71 @@
+// VARIABLES
+$color-ravenclaw: #004E80;
+$color-ravenclaw-dark: #22254a;
+$color-ravenclaw-dark-2: #121424;
+
+$color-slytherin: #005416;
+$color-slytherin-dark: #003e00;
+$color-slytherin-dark-2: #000b00;
+
+$color-hufflepuff: #F2B800;
+$color-hufflepuff-dark: #996E00;
+$color-hufflepuff-dark-2: #664900;
+
+$color-gryffindor: #8d0000;
+$color-gryffindor-dark: #D30004;
+$color-gryffindor-dark-2: #A00003;
+
+$color-default: #003E51;
+$color-default-dark: #002B39;
+$color-default-dark-2: #000506;
+
+$color-default-secondary: #810041;
+
+$color-quiz-dawn: rgb(82, 24, 23);
+$color-quiz-dusk: rgb(207, 59, 1);
+
+$color-white: #fff;
+$color-black: #333;
+
+
+$font-family-primary: 'Merriweather', serif;
+$font-family-secondary: 'Roboto', sans-serif;
+
+// RESET
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
