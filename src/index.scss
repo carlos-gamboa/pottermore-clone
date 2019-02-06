@@ -18,14 +18,17 @@ $color-gryffindor-dark-2: #A00003;
 $color-default: #003E51;
 $color-default-dark: #002B39;
 $color-default-dark-2: #000506;
+$color-default-light: #5C8490;
 
 $color-default-secondary: #810041;
 
 $color-quiz-dawn: rgb(82, 24, 23);
 $color-quiz-dusk: rgb(207, 59, 1);
 
-$color-white: #fff;
+$color-white: #FFF;
 $color-black: #333;
+$color-black-light: #555;
+$color-background: #E8E8E4;
 
 
 $font-family-primary: 'Merriweather', serif;
@@ -48,6 +51,8 @@ body {
   font-family: $font-family-primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: $color-background;
 }
 
 code {
@@ -68,4 +73,29 @@ ul, ol {
   padding: 0;
 
   list-style: none;
+}
+
+.pagination {
+  display: flex;
+  margin-bottom: 1.87rem;
+  
+  li {
+    color: $color-black;
+    transition: color .3s;
+  }
+
+  a {
+    padding: .93rem 1.25rem;
+    min-height: 3.75rem;
+    min-width: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  li.pagination__page--active {
+    color: $color-default-light;
+  }
 }

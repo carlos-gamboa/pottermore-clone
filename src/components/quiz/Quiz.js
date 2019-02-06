@@ -11,9 +11,9 @@ function Quiz(props) {
   }
 
   const backgroundImages = [];
-  backgroundImages.push(require(`../../assets/img/house/${questionId}/back.jpg`));
-  backgroundImages.push(require(`../../assets/img/house/${questionId}/middle.png`));
   backgroundImages.push(require(`../../assets/img/house/${questionId}/front.png`));
+  backgroundImages.push(require(`../../assets/img/house/${questionId}/middle.png`));
+  backgroundImages.push(require(`../../assets/img/house/${questionId}/back.jpg`));
 
   const backgroundStyles = {
     backgroundImage: `url(${backgroundImages[0]}), url(${backgroundImages[1]}), url(${backgroundImages[2]})`

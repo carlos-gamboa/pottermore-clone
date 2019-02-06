@@ -1,0 +1,53 @@
+@import '../../index.scss';
+
+.search-bar {
+  display: flex;
+  min-width: 20rem;
+
+  &__title {
+    padding: .93rem 1.25rem;
+    font-size: 1.37rem;
+    color: $color-white;
+    background-color: $color-default-dark;
+
+    &--ravenclaw {
+      background-color: $color-ravenclaw-dark;
+    }
+
+    &--hufflepuff {
+      background-color: $color-hufflepuff-dark;
+    }
+
+    &--gryffindor {
+      background-color: $color-gryffindor-dark;
+    }
+
+    &--slytherin {
+      background-color: $color-slytherin-dark;
+    }
+  }
+
+  &__input {
+    flex: 1 1 85%;
+    padding: .53rem .93rem;
+    font-family: $font-family-secondary;
+    font-size: 1.37rem;
+    border: 2px solid $color-default-dark;
+
+    &--ravenclaw {
+      border-color: $color-ravenclaw-dark;
+    }
+
+    &--hufflepuff {
+      border-color: $color-hufflepuff-dark;
+    }
+
+    &--gryffindor {
+      border-color: $color-gryffindor-dark;
+    }
+
+    &--slytherin {
+      border-color: $color-slytherin-dark;
+    }
+  }
+}

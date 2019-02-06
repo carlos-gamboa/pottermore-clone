@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 
 function Header(props) {
   const crest = (props.house !== '')
-    ? <div className='header__crest-container'>
-      <img src={require(`../../assets/img/${props.house.toLowerCase()}/crest.png`)} alt='Header crest' className='header__crest'/>
-    </div> 
+    ? 
+    <img src={require(`../../assets/img/${props.house.toLowerCase()}/crest.png`)} alt='Header crest' className='header__crest'/>
     : null;
 
   function getHouseClasses (baseClass) {
@@ -22,8 +21,10 @@ function Header(props) {
   return (
     
     <header className={getHouseClasses('header')}>
-      {crest}
-      <h1 className='header__name'>Hi Wizard</h1>
+      <div className='header__crest-container'>
+        {crest}
+        <h1 className='header__name'>Greetings Wizard</h1>
+      </div>
       <p className='header__text'>Welcome to your personal Potterless page</p>
       <nav className='header__nav'>
         <ul className='header__list'>
@@ -31,6 +32,7 @@ function Header(props) {
           <li className='header__list-item'><NavLink to='/house' exact activeClassName='header__link--active' className='header__link'>Hogwarts House</NavLink></li>
           <li className='header__list-item'><NavLink to='/wand' exact activeClassName='header__link--active' className='header__link'>My wand</NavLink></li>
           <li className='header__list-item'><NavLink to='/patronus' exact activeClassName='header__link--active' className='header__link'>My Patronus</NavLink></li>
+          <li className='header__list-item'><NavLink to='/spells' exact activeClassName='header__link--active' className='header__link'>Spells</NavLink></li>
         </ul>
       </nav>
     </header>

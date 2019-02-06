@@ -5,8 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 40vh;
+  height: 40vh;
   padding: 2.81rem;
+  padding-bottom: 8rem;
   background-color: $color-default;
   color: $color-white;
 
@@ -27,19 +28,21 @@
   }
 
   &__crest-container {
-    width: 6.25rem;
-    height: 7rem;  
-    margin-bottom: .62rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.87rem;
   }
 
   &__crest {
-    width: 100%;
+    width: 6.25rem;
+    height: 7rem;  
+    margin-right: 1.87rem;
   }
 
   &__name {
     text-transform: capitalize;
     font-size: 3rem;
-    margin-bottom: 1.87rem;
     font-weight: 300;
   }
 

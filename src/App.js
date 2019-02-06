@@ -10,6 +10,7 @@ import House from './components/house/House';
 import Patronus from './components/patronus/Patronus';
 import Wand from './components/wand/Wand';
 import Sorting from './components/sorting/Sorting';
+import SpellList from './components/spell-list/SpellList';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path='/patronus' component={Patronus} />
           <Route exact path='/wand' component={Wand} />
           <Route exact path='/sorting' component={Sorting} />
+          <Route exact path='/spells' component={SpellList} />
           <Route render={() => <h1 className='heading__primary' style={{marginTop: '10rem'}}>404 NOT FOUND</h1>}></Route>
         </Switch>
       </React.Fragment>

@@ -1,9 +1,13 @@
 import Actions from '../actions/actions';
+import SpellData from '../../assets/data/spells.json';
+import CharactersData from '../../assets/data/characters.json';
 
 const INITIAL_STATE = {
-  house: '',
+  house: 'Ravenclaw',
   patronus: '',
-  wand: ''
+  wand: '',
+  spells: SpellData.spells,
+  characters: CharactersData.characters
 };
 
 
@@ -38,6 +42,16 @@ const PotterReducer = (state = INITIAL_STATE, action) => {
       {
         ...state,
         wand: action.wand
+      }
+    );
+
+  case Actions.SET_SPELLS:
+    return Object.assign(
+      {},
+      state,
+      {
+        ...state,
+        spells: action.spells
       }
     );
 

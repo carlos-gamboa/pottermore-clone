@@ -1,0 +1,59 @@
+@import '../../index.scss';
+
+.spell-list {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: -5rem;
+
+  &__introduction {
+    width: 90%;
+    margin: 0 auto 5rem;
+    padding: 6.25rem 10.93rem;
+    color: $color-white;
+    background-image: url('../../assets/img/landing/wand-background.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 2.18rem;
+    font-weight: 300;
+    font-size: 3.12rem;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.12rem;
+    line-height: 1.87rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.87rem;
+    }
+  }
+
+  &__container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__settings {
+    margin-bottom: 1.87rem;
+  }
+
+  &__search-bar {
+    margin-bottom: 1.87rem;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+  }
+
+}

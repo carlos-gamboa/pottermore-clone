@@ -1,0 +1,70 @@
+@import '../../index.scss';
+
+.spell {
+  background-color: $color-white;
+  flex-basis: calc(33.33% - 1.1rem);
+  margin-bottom: 1.56rem;
+  display: flex;
+  flex-direction: column;
+  height: 19.18rem;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 1.56rem;
+  }
+
+  &__title {
+    background-color: $color-default;
+    min-height: 8.75rem;
+    padding: 1.87rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 57% 100%, 50% 85%, 43% 100%, 0 100%);
+
+    &--ravenclaw {
+      background-color: $color-ravenclaw;
+    }
+
+    &--hufflepuff {
+      background-color: $color-hufflepuff;
+    }
+
+    &--gryffindor {
+      background-color: $color-gryffindor;
+    }
+
+    &--slytherin {
+      background-color: $color-slytherin;
+    }
+  }
+
+  &__name {
+    font-weight: 300;
+    font-size: 1.87rem;
+    text-align: center;
+  }
+
+  &__info {
+    padding: 1.87rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__type { 
+    font-size: .93rem;
+    color: $color-black;
+    margin-bottom: 1.25rem;
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+  }
+
+  &__effect {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.12rem;
+  }
+}

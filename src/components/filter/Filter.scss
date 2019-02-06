@@ -1,0 +1,57 @@
+@import '../../index.scss';
+
+.filter {
+  padding: .31rem 1.25rem;
+  font-size: .93rem;
+  color: $color-black;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-family: $font-family-secondary;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color .3s;
+
+  &:hover {
+    color: $color-default;
+  }
+
+  &--active {
+    color: $color-default-light;
+    &.filter--ravenclaw {
+      color: $color-ravenclaw;
+    }
+  
+    &.filter--hufflepuff {
+      color: $color-hufflepuff;
+    }
+  
+    &.filter--gryffindor {
+      color: $color-gryffindor;
+    }
+  
+    &.filter--slytherin {
+      color: $color-slytherin;
+    }
+  }
+
+  &--ravenclaw:hover {
+    color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff:hover {
+    color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor:hover {
+    color: $color-gryffindor-dark;
+  }
+
+  &--slytherin:hover {
+    color: $color-slytherin-dark;
+  }
+
+  &:not(:first-child) {
+    border-left: none;
+  }
+}
