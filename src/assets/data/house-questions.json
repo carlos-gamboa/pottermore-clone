@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": "die-name",
-      "color": "#810041",
+      "color": "#E36397",
       "question": "After you have died, what would you most like people to do when they hear your name?",
       "answers": [
         {
@@ -14,7 +14,7 @@
           "points": "gryffindor"
         },
         {
-          "text": "Think with admiration of you achievements",
+          "text": "Think with admiration of your achievements",
           "points": "ravenclaw"
         },
         {
@@ -25,7 +25,7 @@
     },
     {
       "id": "instrument",
-      "color": "#810041",
+      "color": "#091C2F",
       "question": "What kind of instrument most pleases your ear?",
       "answers": [
         {
@@ -47,8 +47,31 @@
       ]
     },
     {
+      "id": "vanity",
+      "color": "#4F634E",
+      "question": "Which of the following would you most hate people to call you?",
+      "answers": [
+        {
+          "text": "Ordinary",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "Ignorant",
+          "points": "gryffindor"
+        },
+        {
+          "text": "Cowardly",
+          "points": "ravenclaw"
+        },
+        {
+          "text": "Selfish",
+          "points": "slytherin"
+        }
+      ]
+    },
+    {
       "id": "box",
-      "color": "#810041",
+      "color": "#844930",
       "question": "Four boxes are placed before you. Which would you try and open?",
       "answers": [
         {
@@ -71,7 +94,7 @@
     },
     {
       "id": "deal-with",
-      "color": "#810041",
+      "color": "#5A32AD",
       "question": "Which of the following do you find most difficult to deal with?",
       "answers": [
         {
@@ -98,7 +121,7 @@
     },
     {
       "id": "study",
-      "color": "#810041",
+      "color": "#0A2239",
       "question": "What are you most looking forward to learning at Hogwarts?",
       "answers": [
         {
@@ -127,6 +150,211 @@
         },
         {
           "text": "Secrets about the castle",
+          "points": "slytherin"
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "color": "#517799",
+      "question": "If you could have any power, which would you choose?",
+      "answers": [
+        {
+          "text": "The power to read minds",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "The power of invisibility",
+          "points": "gryffindor"
+        },
+        {
+          "text": "The power of superhuman strength",
+          "points": "ravenclaw"
+        },
+        {
+          "text": "The power to speak to animals",
+          "points": "slytherin"
+        },
+        {
+          "text": "The power to change the past",
+          "points": "slytherin"
+        },
+        {
+          "text": "The power to change your appearance at will",
+          "points": "slytherin"
+        }
+      ]
+    },
+    {
+      "id": "cheated",
+      "color": "#7B4FD8",
+      "question": "One of your house mates has cheated in a Hogwarts exam by using a Self-Spelling Quill. Now he has come top of the class in Charms, beating you into second place. Professor Flitwick is suspicious of what happened. He draws you to one side after his lesson and asks you whether or not your classmate used a forbidden quill. What do you do?",
+      "answers": [
+        {
+          "text": "Lie and say you don't know (but hope that somebody else tells Professor Flitwick the truth).",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "ell Professor Flitwick that he ought to ask your classmate (and resolve to tell your classmate that if he doesn't tell the truth, you will).",
+          "points": "gryffindor"
+        },
+        {
+          "text": "Tell Professor Flitwick the truth. If your classmate is prepared to win by cheating, he deserves to be found out. Also, as you are both in the same house, any points he loses will be regained by you, for coming first in his place.",
+          "points": "ravenclaw"
+        },
+        {
+          "text": "You would not wait to be asked to tell Professor Flitwick the truth. If you knew that somebody was using a forbidden quill, you would tell the teacher before the exam started.",
+          "points": "slytherin"
+        },
+        {
+          "text": "Attempt to confuse the troll into letting all three of you pass without fighting?",
+          "points": "slytherin"
+        },
+        {
+          "text": "Suggest drawing lots to decide which of you will fight?",
+          "points": "slytherin"
+        },
+        {
+          "text": "Suggest that all three of you should fight (without telling the troll)?",
+          "points": "slytherin"
+        }
+      ]
+    },
+    {
+      "id": "road",
+      "color": "#DE6E4B",
+      "question": "Which road tempts you most?",
+      "answers": [
+        {
+          "text": "The wide, sunny, grassy lane",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "The narrow, dark, lantern-lit alley",
+          "points": "gryffindor"
+        },
+        {
+          "text": "The twisting, leaf-strewn path through woods",
+          "points": "ravenclaw"
+        },
+        {
+          "text": "The cobbled street lined with ancient buildings",
+          "points": "slytherin"
+        }
+      ]
+    },
+    {
+      "id": "dawn-dusk",
+      "color": "#FF6214",
+      "question": "Dawn or Dusk?",
+      "answers": [
+        {
+          "text": "Dusk",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "Dawn",
+          "points": "gryffindor"
+        }
+      ]
+    },
+    {
+      "id": "left-right",
+      "color": "#0B3C49",
+      "question": "Left or Right?",
+      "answers": [
+        {
+          "text": "Left",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "Right",
+          "points": "gryffindor"
+        }
+      ]
+    },
+    {
+      "id": "potion",
+      "color": "#9ECC8C",
+      "question": "Given the choice, would you rather invent a potion that would guarantee you:",
+      "answers": [
+        {
+          "text": "Glory",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "Wisdom",
+          "points": "gryffindor"
+        },
+        {
+          "text": "Love",
+          "points": "gryffindor"
+        },
+        {
+          "text": "Power",
+          "points": "gryffindor"
+        }
+      ]
+    },
+    {
+      "id": "pet",
+      "color": "#06121E",
+      "question": "Which would be your pet for Hogwarts?",
+      "answers": [
+        {
+          "text": "Barn Owl",
+          "points": "hufflepuff"
+        },
+        {
+          "text": "Tawny Owl",
+          "points": "gryffindor"
+        },
+        {
+          "text": "Brown Owl",
+          "points": "ravenclaw"
+        },
+        {
+          "text": "Screech Owl",
+          "points": "slytherin"
+        },
+        {
+          "text": "Black Cat",
+          "points": "slytherin"
+        },
+        {
+          "text": "Ginger Cat",
+          "points": "slytherin"
+        },
+        {
+          "text": "Siamese Cat",
+          "points": "slytherin"
+        },
+        {
+          "text": "Tabby Cat",
+          "points": "slytherin"
+        },
+        {
+          "text": "White Cat",
+          "points": "slytherin"
+        },
+        {
+          "text": "Common Toad",
+          "points": "slytherin"
+        },
+        {
+          "text": "Crested Toad",
+          "points": "slytherin"
+        },
+        {
+          "text": "Harlequin Toad",
+          "points": "slytherin"
+        },
+        {
+          "text": "Natterjack Toad",
+          "points": "slytherin"
+        },
+        {
+          "text": "Western Green Toad",
           "points": "slytherin"
         }
       ]
