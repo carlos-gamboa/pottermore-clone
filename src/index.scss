@@ -30,9 +30,15 @@ $color-black: #333;
 $color-black-light: #555;
 $color-background: #E8E8E4;
 
-
+/* FONT FAMILY */
 $font-family-primary: 'Merriweather', serif;
 $font-family-secondary: 'Roboto', sans-serif;
+
+/* RESPONSIVE BREAKPOINTS */
+$bp-xl: 80em; // 1200px
+$bp-lg: 62em; // 992px
+$bp-md: 48em; // 768px
+$bp-sm: 36em;// 576px
 
 // RESET
 *,
@@ -85,7 +91,7 @@ ul, ol {
   }
 
   a {
-    padding: .93rem 1.25rem;
+    padding: .53rem .93rem;
     min-height: 3.75rem;
     min-width: 3.75rem;
     display: flex;
@@ -93,6 +99,10 @@ ul, ol {
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media screen and (min-width: $bp-sm) {
+      padding: .93rem 1.25rem;
+    }
   }
 
   li.pagination__page--active {

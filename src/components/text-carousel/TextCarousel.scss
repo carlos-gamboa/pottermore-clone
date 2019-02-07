@@ -1,4 +1,6 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
 
 .text-carousel {
   display: flex;
@@ -6,17 +8,14 @@
   height: 100%;
 
   &__main {
-    flex: 1 1 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 1 95%;
+    
+    @include flex-center;
     flex-direction: column;
   }
 
   &__arrow-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include flex-center;
     margin-bottom: 1.25rem;
   }
 
@@ -36,24 +35,30 @@
     flex-grow: 1;
     flex-shrink: 1;
     padding: 1.25rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    @include flex-center;
+
     width: 100%;
   }
 
   &__text {
+    @include heading-primary;
     color: $color-white;
     font-size: 1.25rem;
-    font-weight: 300;
-    text-align: center;
+
+    @media only screen and (min-width: $bp-lg) {
+      margin-top: 1.87rem;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      margin-top: 2.75rem;
+    }
   }
 
   &__dots {
-    flex: 1 1 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 1 5%;
+    
+    @include flex-center;
     flex-direction: column;
   }
 
@@ -65,7 +70,7 @@
     color: $color-white;
     text-transform: uppercase;
     font-family: $font-family-secondary;
-    font-size: .75rem;
+    font-size: .93rem;
     cursor: pointer;
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 

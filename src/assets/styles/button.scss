@@ -1,0 +1,8 @@
+@import '../../index.scss';
+
+@mixin button-hamburger {
+  width: 2.25rem;
+  height: 2px;
+  background-color: $color-background;
+  display: inline-block;
+}

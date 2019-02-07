@@ -1,15 +1,15 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/hogwarts.scss';
 
 .landing-card {
   height: 20rem;
-  max-width: 90vw;
   margin: 0 auto;
   padding: .93rem 1.25rem;
 
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   position: relative;
 
   background-position: center;
@@ -30,6 +30,7 @@
     margin-bottom: 2.25rem;
     text-align: center;
     color: $color-white;
+    text-transform: capitalize;
   }
 
   &__button {
@@ -47,37 +48,8 @@
       background-color: $color-default-dark-2;
     }
 
-    &--ravenclaw {
-      background-color: $color-ravenclaw-dark;
-
-      &:hover {
-        background-color: $color-ravenclaw-dark-2;
-      }
-    }
-
-    &--hufflepuff {
-      background-color: $color-hufflepuff-dark;
-
-      &:hover {
-        background-color: $color-hufflepuff-dark-2;
-      }
-    }
-
-    &--gryffindor {
-      background-color: $color-gryffindor-dark;
-
-      &:hover {
-        background-color: $color-gryffindor-dark-2;
-      }
-    }
-
-    &--slytherin {
-      background-color: $color-slytherin-dark;
-
-      &:hover {
-        background-color: $color-slytherin-dark-2;
-      }
-    }
+    @include hogwarts-background-dark;
+    @include hogwarts-background-dark-2-hover;
   }
 
   &:not(:last-of-type) {

@@ -1,0 +1,121 @@
+{
+  "questions": [
+    {
+      "id": "die-name",
+      "color": "#E36397",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Shine",
+          "points": "20"
+        },
+        {
+          "text": "Glitter",
+          "points": "6"
+        },
+        {
+          "text": "Glow",
+          "points": "13"
+        }
+      ]
+    },
+    {
+      "id": "instrument",
+      "color": "#091C2F",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Make",
+          "points": "16"
+        },
+        {
+          "text": "Improve",
+          "points": "24"
+        }
+      ]
+    },
+    {
+      "id": "vanity",
+      "color": "#4F634E",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Lead",
+          "points": "30"
+        },
+        {
+          "text": "Save",
+          "points": "5"
+        },
+        {
+          "text": "Escape",
+          "points": "9"
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "color": "#844930",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Forever",
+          "points": "27"
+        },
+        {
+          "text": "Sometimes",
+          "points": "16"
+        }
+      ]
+    },
+    {
+      "id": "deal-with",
+      "color": "#5A32AD",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Hope",
+          "points": "7"
+        },
+        {
+          "text": "Trust",
+          "points": "4"
+        },
+        {
+          "text": "Love",
+          "points": "2"
+        }
+      ]
+    },
+    {
+      "id": "study",
+      "color": "#0A2239",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Sharp",
+          "points": "31"
+        },
+        {
+          "text": "Sleek",
+          "points": "6"
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "color": "#517799",
+      "question": "Choose a word",
+      "answers": [
+        {
+          "text": "Myth",
+          "points": "17"
+        },
+        {
+          "text": "Legend",
+          "points": "9"
+        }
+      ]
+    }
+  ]
+}

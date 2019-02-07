@@ -1,55 +1,58 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/hogwarts.scss';
+@import '../../assets/styles/typography.scss';
 
 .spell {
   background-color: $color-white;
-  flex-basis: calc(33.33% - 1.1rem);
+  flex-basis: 100%;
   margin-bottom: 1.56rem;
   display: flex;
   flex-direction: column;
   height: 19.18rem;
 
-  &:not(:nth-child(3n)) {
-    margin-right: 1.56rem;
+  @media screen and (min-width: $bp-sm) {
+    flex-basis: calc(50% - 1.1rem);
   }
+
+  @media screen and (min-width: $bp-sm) and (max-width: $bp-lg) {
+    &:not(:nth-child(2n)) {
+      margin-right: 1.56rem;
+    }
+  }
+
+  @media screen and (min-width: $bp-lg) {
+    flex-basis: calc(33.33% - 1.1rem);
+
+    &:not(:nth-child(3n)) {
+      margin-right: 1.56rem;
+    }
+  }
+
+  
 
   &__title {
     background-color: $color-default;
     min-height: 8.75rem;
     padding: 1.87rem 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    @include flex-center;
+
     color: $color-white;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 57% 100%, 50% 85%, 43% 100%, 0 100%);
 
-    &--ravenclaw {
-      background-color: $color-ravenclaw;
-    }
-
-    &--hufflepuff {
-      background-color: $color-hufflepuff;
-    }
-
-    &--gryffindor {
-      background-color: $color-gryffindor;
-    }
-
-    &--slytherin {
-      background-color: $color-slytherin;
-    }
+    @include hogwarts-background;
   }
 
   &__name {
-    font-weight: 300;
+    @include heading-primary;
     font-size: 1.87rem;
-    text-align: center;
   }
 
   &__info {
     padding: 1.87rem 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    @include flex-center;
     flex-direction: column;
     flex-grow: 1;
   }

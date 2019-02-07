@@ -1,0 +1,197 @@
+{
+  "questions": [
+    {
+      "id": "tall-tree",
+      "color": "#A52808",
+      "question": "To ensure we find the perfect wand for you, it's very important that you answer the following questions honestly. First of all, would you describe yourself as...",
+      "answers": [
+        {
+          "text": "Average height",
+          "points": "6"
+        },
+        {
+          "text": "Short",
+          "points": "9"
+        },
+        {
+          "text": "Tall",
+          "points": "8"
+        }
+      ]
+    },
+    {
+      "id": "eyes",
+      "color": "#221200",
+      "question": "And your eyes...",
+      "answers": [
+        {
+          "text": "Dark brown / Black",
+          "points": "8"
+        },
+        {
+          "text": "Brown",
+          "points": "7"
+        },
+        {
+          "text": "Hazel",
+          "points": "4"
+        },
+        {
+          "text": "Blue",
+          "points": "5"
+        },
+        {
+          "text": "Blue / Grey",
+          "points": "3"
+        },
+        {
+          "text": "Blue / Green",
+          "points": "14"
+        },
+        {
+          "text": "Green",
+          "points": "2"
+        },
+        {
+          "text": "Grey",
+          "points": "52"
+        },
+        {
+          "text": "Other",
+          "points": "16"
+        }
+      ]
+    },
+    {
+      "id": "house-number",
+      "color": "#0A0353",
+      "question": "Was the day on which you were born...",
+      "answers": [
+        {
+          "text": "An even number",
+          "points": "25"
+        },
+        {
+          "text": "An odd number",
+          "points": "4"
+        }
+      ]
+    },
+    {
+      "id": "trophies",
+      "color": "#222222",
+      "question": "Do you most pride yourself on your...",
+      "answers": [
+        {
+          "text": "Kindness",
+          "points": "9"
+        },
+        {
+          "text": "Optimism",
+          "points": "8"
+        },
+        {
+          "text": "Determination",
+          "points": "6"
+        },
+        {
+          "text": "Resilience",
+          "points": "4"
+        },
+        {
+          "text": "Imagination",
+          "points": "35"
+        },
+        {
+          "text": "Intelligence",
+          "points": "2"
+        },
+        {
+          "text": "Originality",
+          "points": "12"
+        }
+      ]
+    },
+    {
+      "id": "crossroads",
+      "color": "#005B8D",
+      "question": "Travelling alone down a deserted road, you reach a crossroads. Do you continue...",
+      "answers": [
+        {
+          "text": "Left towards the sea",
+          "points": "2"
+        },
+        {
+          "text": "Ahead towards the forest",
+          "points": "3"
+        },
+        {
+          "text": "Right towards the castle",
+          "points": "5"
+        }
+      ]
+    },
+    {
+      "id": "scary-cave",
+      "color": "#AC6200",
+      "question": "Do you most fear...",
+      "answers": [
+        {
+          "text": "Fire",
+          "points": "7"
+        },
+        {
+          "text": "Darkness",
+          "points": "6"
+        },
+        {
+          "text": "Isolation",
+          "points": "5"
+        },
+        {
+          "text": "Small spaces",
+          "points": "7"
+        },
+        {
+          "text": "Heights",
+          "points": "10"
+        }
+      ]
+    },
+    {
+      "id": "treasure-cave",
+      "color": "#4A018f",
+      "question": "In a chest of magical artefacts, which would you choose...",
+      "answers": [
+        {
+          "text": "Ornate mirror",
+          "points": "5"
+        },
+        {
+          "text": "Dusty bottle",
+          "points": "7"
+        },
+        {
+          "text": "Golden key",
+          "points": "8"
+        },
+        {
+          "text": "Silver dagger",
+          "points": "2"
+        },
+        {
+          "text": "Bound scroll",
+          "points": "4"
+        },
+        {
+          "text": "Glittering jewel",
+          "points": "3"
+        },
+        {
+          "text": "Black glove",
+          "points": "0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,36 +1,25 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/hogwarts.scss';
+@import '../../assets/styles/button.scss';
+@import '../../assets/styles/typography.scss';
 
 .header {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
   padding: 2.81rem;
   padding-bottom: 8rem;
   background-color: $color-default;
   color: $color-white;
 
-  &--ravenclaw {
-    background-color: $color-ravenclaw;
+  @media only screen and (min-width: $bp-md) {
+    height: 50vh;
   }
 
-  &--hufflepuff {
-    background-color: $color-hufflepuff;
-  }
-
-  &--gryffindor {
-    background-color: $color-gryffindor;
-  }
-
-  &--slytherin {
-    background-color: $color-slytherin;
-  }
+  @include hogwarts-background;
 
   &__crest-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     margin-bottom: 1.87rem;
   }
 
@@ -41,38 +30,152 @@
   }
 
   &__name {
+    @include heading-primary;
     text-transform: capitalize;
     font-size: 3rem;
-    font-weight: 300;
   }
 
   &__text {
     margin-bottom: 1.56rem;
   }
 
+  &__nav {
+    width: 100%;
+    transition: height 1s ease, margin-top 1s ease;
+
+    @media only screen and (max-width: $bp-md) {
+      overflow: hidden;
+      height: 16.87rem;
+      margin-top: 1.87rem;
+    }
+
+    &--hidden {
+      @media only screen and (max-width: $bp-md) {
+        height: 0;
+        margin-top: 0;
+      }
+    }
+  }
+
   &__list {
+    @include flex-center;
+    flex-direction: column;
+
+    @media only screen and (min-width: $bp-md) {
+      flex-direction: row;
+    }
+  }
+
+  &__list-item {
     display: flex;
+    width: 100%;
+
+    @media only screen and (min-width: $bp-md) {
+      width: auto;
+    }
   }
 
   &__link {
+    @include flex-center;
+    width: 100%;
     text-transform: uppercase;
     text-decoration: none;
     border: 3px solid transparent;
     padding: .93rem 1.25rem;
-    transition: border-color .5s ease;
+    background-color: transparent;
+    color: $color-white;
     font-family: $font-family-secondary;
     font-size: .93rem;
+    transition: border-color .5s ease, color .5s ease, background-color .5s ease;
 
-    &:visited,
-    &:link {
-      color: $color-white;
+    @media only screen and (min-width: $bp-md) {
+      width: auto;
     }
 
     &--active,
     &:hover,
     &:active {
-      color: $color-white;
-      border-bottom-color: $color-white; 
+      color: $color-black;
+      background-color: $color-white;
+
+      @media only screen and (min-width: $bp-md) {
+        color: $color-white;
+        background-color: transparent;
+        border-bottom-color: $color-white; 
+      }
+    }
+  }
+
+  &__mobile {
+    @include flex-center;
+
+    @media only screen and (min-width: $bp-md) {
+      display: none;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .header__button .header__icon {
+      background-color: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.15rem;
+    width: 3.15rem;
+    cursor: pointer;
+
+
+    &:hover {
+      .header__icon::before {
+        @media only screen and (max-width: $bp-md) {
+          top: -0.6rem;
+        }
+      }
+
+      .header__icon::after {
+        @media only screen and (max-width: $bp-md) {
+          top: 0.6rem;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @include button-hamburger;
+    position: relative;
+
+    &::after {
+      @include button-hamburger;
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+      top: 0.45rem;
+    }
+
+    &::before {
+      @include button-hamburger;
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+      top: -0.45rem;
     }
   }
 }

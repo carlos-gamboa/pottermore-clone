@@ -8,13 +8,14 @@ import ReactPaginate from 'react-paginate';
 import Actions from '../../redux/actions/actions';
 import SearchBar from '../search-bar/SearchBar';
 import Filter from '../filter/Filter';
-// import DataService from '../../services/data';
+import SpellService from '../../services/spell-service';
 
 class SpellList extends Component {
 
   constructor() {
     super();
     this.state = {
+      spellService: new SpellService(),
       filters: ['Charm', 'Curse', 'Enchantment', 'Spell'],
       activeFilter: '',
       searchQuery: '',
@@ -27,10 +28,12 @@ class SpellList extends Component {
   }
 
   componentDidMount() {
+    const spells = this.state.spellService.getSpells();
+    this.props.setSpells(spells);
     this.setState({
-      filteredSpells: this.props.spells,
-      pageCount: this.props.spells.length / this.state.perPage,
-      spellsToShow: this.props.spells.slice(0, this.state.perPage)
+      filteredSpells: spells,
+      pageCount: spells.length / this.state.perPage,
+      spellsToShow: spells.slice(0, this.state.perPage)
     });
   }
 
@@ -145,7 +148,7 @@ class SpellList extends Component {
           breakClassName={'pagination__break-me'}
           pageCount={this.state.pageCount}
           marginPagesDisplayed={0}
-          pageRangeDisplayed={3}
+          pageRangeDisplayed={2}
           onPageChange={this.handlePageClick}
           containerClassName={'pagination'}
           subContainerClassName={'pagination__page pagination'}

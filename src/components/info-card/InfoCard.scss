@@ -1,0 +1,53 @@
+@import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
+
+.info-card {
+  margin: 0 auto 5rem;
+  background-color: $color-white;
+  color: $color-black;
+  padding: 1.87rem 2.25rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    padding: 2.5rem 3.75rem;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    padding: 6.25rem 10.93rem;
+  }
+  
+  @include flex-center;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 1.87rem;
+  }
+
+  &__details {
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    margin-bottom: .93rem;
+    font-size: .93rem;
+  }
+
+  &__title {
+    @include heading-primary;
+    font-size: 2.12rem;
+    margin-bottom: 1.12rem;
+    text-transform: capitalize;
+  }
+
+  &__author {
+    @include heading-primary;
+    font-size: 1.87rem;
+    margin-bottom: 2.12rem;
+  }
+
+  &__description {
+    text-align: left;
+    font-size: 1.12rem;
+    line-height: 2.2rem;
+    font-weight: 300;
+  }
+
+}

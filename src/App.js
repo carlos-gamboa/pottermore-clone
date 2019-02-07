@@ -11,19 +11,21 @@ import Patronus from './components/patronus/Patronus';
 import Wand from './components/wand/Wand';
 import Sorting from './components/sorting/Sorting';
 import SpellList from './components/spell-list/SpellList';
+import Login from './components/login/Login';
 
 class App extends Component {
   render() {
-    const { house } = this.props;
+    const { house, showHeader } = this.props;
+
+    const header = (showHeader) ? <Header house={house}></Header> : null;
 
     return (
       <React.Fragment>
-        <Header house={house}></Header>
+        { header }
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route exact path='/house' render={() => (
-            <House house={house}></House>
-          )}/>
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/house' component={House}/>
           <Route exact path='/patronus' component={Patronus} />
           <Route exact path='/wand' component={Wand} />
           <Route exact path='/sorting' component={Sorting} />
@@ -37,7 +39,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    house: state.house
+    house: state.house,
+    showHeader: state.showHeader
   };
 };
 
@@ -46,7 +49,8 @@ const mapDispatchToProps = () => {
 };
 
 App.propTypes = {
-  house: PropTypes.string
+  house: PropTypes.string,
+  showHeader: PropTypes.bool
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

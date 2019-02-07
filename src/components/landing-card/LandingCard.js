@@ -5,7 +5,7 @@ import { withRouter, Link } from 'react-router-dom';
 
 function LandingCard(props) {
   const style = {
-    backgroundImage: 'url(' +props.backgroundImage + ')'
+    backgroundImage: 'url(' + props.backgroundImage + ')'
   };
 
   function getHouseClasses (baseClass) {
