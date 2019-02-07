@@ -1,0 +1,26 @@
+@import '../../index.scss';
+
+.wand {
+  position: relative;
+  margin-top: -5rem;
+
+  &__container {
+    width: 90%;
+    margin: 0 auto 1.87rem;
+    padding: 6.25rem 10.93rem;
+    color: $color-white;
+    background-image: url('../../assets/img/landing/wand-background.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 3.12rem;
+
+    &--capitalize {
+      text-transform: capitalize
+    }
+  }
+}

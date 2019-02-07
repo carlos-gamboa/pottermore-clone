@@ -1,19 +1,13 @@
 import Actions from '../actions/actions';
-import SpellData from '../../assets/data/spells.json';
-import CharactersData from '../../assets/data/characters.json';
-import HouseData from '../../assets/data/house.json';
-import PatronusData from '../../assets/data/patronus.json';
 
 const INITIAL_STATE = {
   house: 'Slytherin',
   patronus: '',
-  wand: '',
-  spells: SpellData.spells,
-  characters: CharactersData.characters,
-  houses: HouseData
+  wand: null,
+  spells: [],
+  characters: [],
+  houseData: {}
 };
-
-const patronusOptions = PatronusData.patronus;
 
 const PotterReducer = (state = INITIAL_STATE, action) => {
 
@@ -59,15 +53,36 @@ const PotterReducer = (state = INITIAL_STATE, action) => {
       }
     );
 
-  case Actions.GENERATE_PATRONUS:
+  case Actions.SET_CHARACTERS:
     return Object.assign(
       {},
       state,
       {
         ...state,
-        patronus: patronusOptions[action.points]
+        characters: action.characters
       }
     );
+
+  case Actions.SET_HOUSES:
+    return Object.assign(
+      {},
+      state,
+      {
+        ...state,
+        houses: action.houses
+      }
+    );
+
+  case Actions.SET_HOUSE_DATA: {
+    return Object.assign(
+      {},
+      state,
+      {
+        ...state,
+        houseData: action.houseData
+      }
+    );
+  }
 
   default:
     return Object.assign(
