@@ -4,7 +4,8 @@ const Actions = {
   SET_WAND: 'SET_WAND',
   SET_SPELLS: 'SET_SPELLS',
   SET_HOUSE_DATA: 'SET_HOUSE_DATA',
-  SET_SHOW_HEADER: 'SET_SHOW_HEADER'
+  SET_SHOW_HEADER: 'SET_SHOW_HEADER',
+  SET_USER: 'SET_USER'
 };
 
 export default Actions;

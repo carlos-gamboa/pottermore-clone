@@ -2,14 +2,14 @@
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/typography.scss';
 
-.login {
+.register {
   @include flex-center;
   flex-direction: column;
 
   height: 100vh;
   width: 100vw;
   background-color: $color-default-dark-2;
-  background-image: url('../../assets/img/auth/login-background.jpg');
+  background-image: url('../../assets/img/auth/register-background.jpg');
   background-position: center;
   background-size: cover;
 

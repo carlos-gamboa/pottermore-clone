@@ -25,6 +25,10 @@ class House extends Component {
         houseBackground: require(`../../assets/img/${this.props.house.toLowerCase()}/house-background.jpg`),
         loadingData: false
       });
+    } else {
+      this.setState({
+        loadingData: false
+      });
     }
   }
 

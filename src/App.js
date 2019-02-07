@@ -12,6 +12,7 @@ import Wand from './components/wand/Wand';
 import Sorting from './components/sorting/Sorting';
 import SpellList from './components/spell-list/SpellList';
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Landing} />
           <Route exact path='/login' component={Login} />
+          <Route exact path='/register' component={Register} />
           <Route exact path='/house' component={House}/>
           <Route exact path='/patronus' component={Patronus} />
           <Route exact path='/wand' component={Wand} />

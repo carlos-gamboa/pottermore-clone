@@ -1,6 +1,7 @@
 import Actions from '../actions/actions';
 
 const INITIAL_STATE = {
+  user: '',
   showHeader: true,
   house: '',
   patronus: '',
@@ -92,6 +93,17 @@ const PotterReducer = (state = INITIAL_STATE, action) => {
       {
         ...state,
         showHeader: action.showHeader
+      }
+    );
+  }
+
+  case Actions.SET_USER: {
+    return Object.assign(
+      {},
+      state,
+      {
+        ...state,
+        user: action.user
       }
     );
   }
