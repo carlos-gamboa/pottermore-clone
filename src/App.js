@@ -14,7 +14,7 @@ import SpellList from './components/spell-list/SpellList';
 
 class App extends Component {
   render() {
-    const { house } = this.props;
+    const { house, houses } = this.props;
 
     return (
       <React.Fragment>
@@ -22,7 +22,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Landing} />
           <Route exact path='/house' render={() => (
-            <House house={house}></House>
+            <House house={house} houses={houses}></House>
           )}/>
           <Route exact path='/patronus' component={Patronus} />
           <Route exact path='/wand' component={Wand} />
@@ -37,7 +37,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    house: state.house
+    house: state.house,
+    houses: state.houses
   };
 };
 
@@ -46,7 +47,8 @@ const mapDispatchToProps = () => {
 };
 
 App.propTypes = {
-  house: PropTypes.string
+  house: PropTypes.string,
+  houses: PropTypes.object
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -1,13 +1,50 @@
 @import '../../index.scss';
 
 .house {
-
-  background-color: $color-default-secondary;
   color: $color-white;
+
+  &__main {
+    position: relative;
+    margin-top: -5rem;
+  }
+
+  &__introduction {
+    width: 90%;
+    margin: 0 auto 5rem;
+    padding: 6.25rem 10.93rem;
+    color: $color-white;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 2.18rem;
+    font-weight: 300;
+    font-size: 3.12rem;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 1.12rem;
+    line-height: 1.87rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.87rem;
+    }
+  }
+
+  &__traits-container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 6.25rem;
+  }
 
   &__container {
     display: flex;
     min-height: 60vh;
+    background-color: $color-default-secondary;
   }
 
   &__title-container {

@@ -1,0 +1,33 @@
+@import '../../index.scss';
+
+.trait {
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__icon-wrapper {
+    width: 11.87rem;
+    height: 10.62rem;
+    margin-bottom: 2.25rem;
+    background-color: $color-default-secondary;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 95%, 18% 95%, 0% 38%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 50%;
+    height: 50%;
+    color: white;
+  }
+
+  &__name {
+    color: $color-black;
+    font-size: 1.87rem;
+    text-transform: capitalize;
+  }
+}
