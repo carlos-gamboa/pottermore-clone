@@ -1,14 +1,22 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
 
 .info-card {
-  width: 90%;
   margin: 0 auto 5rem;
   background-color: $color-white;
   color: $color-black;
-  padding: 7.5rem 8.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1.87rem 2.25rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    padding: 2.5rem 3.75rem;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    padding: 6.25rem 10.93rem;
+  }
+  
+  @include flex-center;
   flex-direction: column;
 
   &:not(:last-child) {
@@ -23,17 +31,15 @@
   }
 
   &__title {
+    @include heading-primary;
     font-size: 2.12rem;
-    font-weight: 300;
-    text-align: center;
     margin-bottom: 1.12rem;
     text-transform: capitalize;
   }
 
   &__author {
+    @include heading-primary;
     font-size: 1.87rem;
-    font-weight: 300;
-    text-align: center;
     margin-bottom: 2.12rem;
   }
 

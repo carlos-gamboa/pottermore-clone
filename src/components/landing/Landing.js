@@ -16,62 +16,91 @@ class Landing extends Component {
 
   getCards(props) {
     const cards = [];
-    cards.push(this.getCard(props.house, 'Hogwarts House', '/house', 'house'));
-    cards.push(this.getCard(props.patronus, 'Patronus', '/patronus', 'patronus'));
-    cards.push(this.getCard(props.wand, 'Wand', '/wand', 'wand'));
+    cards.push({
+      reference: '/house',
+      title: this.getCardTitle(props.house, 'Hogwarts House'),
+      value: this.getCardValue(props.house, 'Hogwarts House'),
+      backgroundImage: this.getCardBackgroundImage(props.house, 'Hogwarts House'),
+      buttonText: this.getCardButtonText(props.house, 'house')
+    });
+    cards.push({
+      reference: '/patronus',
+      title: this.getCardTitle(props.patronus, 'Patronus'),
+      value: this.getCardValue(props.patronus, 'Patronus'),
+      backgroundImage: this.getCardBackgroundImage(props.patronus, 'Patronus'),
+      buttonText: this.getCardButtonText(props.patronus, 'patronus')
+    });
+    cards.push({
+      reference: '/wand',
+      title: this.getCardTitle(props.wand, 'Wand'),
+      value: this.getCardValue(props.wand, 'Wand'),
+      backgroundImage: this.getCardBackgroundImage(props.wand, 'Wand'),
+      buttonText: this.getCardButtonText(props.wand, 'wand')
+    });
     return cards;
   }
 
-  getCard(value, title, reference, buttonText) {
-    const card = {
-      reference: reference
-    };
+  getCardTitle(value, title) {
+    const newTitle = (value !== '') ? `My ${title}` : '';
+    return newTitle;
+  }
 
-    //Set the static background images
-    switch (title) {
-    case 'Patronus':
-      card.backgroundImage = require('../../assets/img/landing/patronus-background.png');
-      break;
-    case 'Wand': 
-      card.backgroundImage = require('../../assets/img/landing/wand-background.jpg');
-      break;
-    default:
-      break;
-    }
+  getCardButtonText(value, buttonText) {
+    const newButtonText = (value !== '') ? `More about my ${buttonText}` : `Discover your ${buttonText}`;
+    return newButtonText;
+  }
 
-    // Set card data when there's a value
-    if (value !== '') {
-      card.title = `My ${title}`;
-      card.value = value;
-      card.buttonText = `More about my ${buttonText}`;
-
-      // Set dynamic background of house
-      if (title === 'Hogwarts House') {
-        card.backgroundImage = require(`../../assets/img/${value.toLowerCase()}/house-background.jpg`);
+  getCardValue(value, title) {
+    let newValue;
+    if (value !== '' && value !== null) {
+      if (title === 'Wand') {
+        newValue = `${value.wood} wood with ${value.core} core`;
+      } 
+      else {
+        newValue = value;
       }
     } 
     else {
-      card.title = '';
-      card.buttonText = `Discover your ${buttonText}`;
-
-      // Set the value and dynamic image of cards when there's no value
       switch (title) {
       case 'Hogwarts House':
-        card.value = 'Join your Hogwarts House';
-        card.backgroundImage = require('../../assets/img/landing/house-background.jpg');
+        newValue = 'Join your Hogwarts House';
         break;
       case 'Patronus':
-        card.value = 'Discover your Patronus';
+        newValue = 'Discover your Patronus';
         break;
       case 'Wand': 
-        card.value = 'The Wand Ceremony';
+        newValue = 'The Wand Ceremony';
         break;
       default:
         break;
       }
     }
-    return card;
+
+    return newValue;
   }
+
+  getCardBackgroundImage(value, title) {
+    let backgroundImage;
+    switch (title) {
+    case 'Patronus':
+      backgroundImage = require('../../assets/img/landing/patronus-background.png');
+      break;
+    case 'Wand': 
+      backgroundImage = require('../../assets/img/landing/wand-background.jpg');
+      break;
+    default:
+      if (value !== '') {
+        backgroundImage = require(`../../assets/img/${value.toLowerCase()}/house-background.jpg`);
+      }
+      else {
+        backgroundImage = require('../../assets/img/landing/house-background.jpg');
+      }
+      break;
+    }
+
+    return backgroundImage;
+  }
+
 
   render() {
     const { cards } = this.state;
@@ -111,7 +140,7 @@ const mapDispatchToProps = () => {
 Landing.propTypes = {
   house: PropTypes.string,
   patronus: PropTypes.string,
-  wand: PropTypes.string
+  wand: PropTypes.object
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Landing));

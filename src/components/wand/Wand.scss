@@ -1,22 +1,37 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
 
 .wand {
   position: relative;
+
+  margin: 0 1.25rem;
   margin-top: -5rem;
 
+  @media only screen and (min-width: $bp-xl) {
+    @include container;
+    margin-top: -5rem;
+  }
+
   &__container {
-    width: 90%;
     margin: 0 auto 1.87rem;
-    padding: 6.25rem 10.93rem;
+    padding: 1.87rem 2.25rem;
     color: $color-white;
     background-image: url('../../assets/img/landing/wand-background.jpg');
     background-position: center;
     background-size: cover;
+
+    @media only screen and (min-width: $bp-md) {
+      padding: 2.5rem 3.75rem;
+    }
+
+    @media only screen and (min-width: $bp-xl) {
+      padding: 6.25rem 10.93rem;
+    }
   }
 
   &__title {
-    text-align: center;
-    font-weight: 300;
+    @include heading-primary;
     font-size: 3.12rem;
 
     &--capitalize {

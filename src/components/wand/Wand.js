@@ -42,7 +42,11 @@ class Wand extends Component {
   }
 
   getWinner() {
-    this.props.generateWand(this.state.points);
+    const wand = {
+      wood: this.state.wandService.getWandWood(this.state.points),
+      core: this.state.wandService.getWandCore(this.state.points),
+    };
+    this.props.setWand(wand);
   }
 
   render() {
@@ -79,15 +83,15 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    generateWand: (points) => {
-      dispatch({type: Actions.GENERATE_WAND, points});
+    setWand: (wand) => {
+      dispatch({type: Actions.SET_WAND, wand});
     }
   };
 };
 
 Wand.propTypes = {
   wand: PropTypes.object,
-  generateWand: PropTypes.func
+  setWand: PropTypes.func
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Wand));

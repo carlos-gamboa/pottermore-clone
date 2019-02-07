@@ -1,11 +1,11 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
 
 .sorting {
   &__container {
     min-height: 53vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    @include flex-center;
     flex-direction: column;
   }
 

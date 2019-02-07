@@ -1,0 +1,145 @@
+@import '../../index.scss';
+
+@mixin hogwarts-background {
+  &--ravenclaw {
+    background-color: $color-ravenclaw;
+  }
+
+  &--hufflepuff {
+    background-color: $color-hufflepuff;
+  }
+
+  &--gryffindor {
+    background-color: $color-gryffindor;
+  }
+
+  &--slytherin {
+    background-color: $color-slytherin;
+  }
+}
+
+@mixin hogwarts-background-dark {
+  &--ravenclaw {
+    background-color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff {
+    background-color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor {
+    background-color: $color-gryffindor-dark;
+  }
+
+  &--slytherin {
+    background-color: $color-slytherin-dark;
+  }
+}
+
+@mixin hogwarts-background-dark-hover {
+  &--ravenclaw:hover {
+    background-color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff:hover {
+    background-color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor:hover {
+    background-color: $color-gryffindor-dark;
+  }
+
+  &--slytherin:hover {
+    background-color: $color-slytherin-dark;
+  }
+}
+
+@mixin hogwarts-background-dark-2-hover {
+  &--ravenclaw:hover {
+    background-color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff:hover {
+    background-color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor:hover {
+    background-color: $color-gryffindor-dark;
+  }
+
+  &--slytherin:hover {
+    background-color: $color-slytherin-dark;
+  }
+}
+
+@mixin hogwarts-color {
+  &--ravenclaw {
+    color: $color-ravenclaw;
+  }
+
+  &--hufflepuff {
+    color: $color-hufflepuff;
+  }
+
+  &--gryffindor {
+    color: $color-gryffindor;
+  }
+
+  &--slytherin {
+    color: $color-slytherin;
+  }
+}
+
+@mixin hogwarts-color-dark {
+  &--ravenclaw:hover {
+    color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff:hover {
+    color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor:hover {
+    color: $color-gryffindor-dark;
+  }
+
+  &--slytherin:hover {
+    color: $color-slytherin-dark;
+  }
+}
+
+@mixin hogwarts-color-dark-hover {
+  &--ravenclaw {
+    color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff {
+    color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor {
+    color: $color-gryffindor-dark;
+  }
+
+  &--slytherin {
+    color: $color-slytherin-dark;
+  }
+}
+
+@mixin hogwarts-border-dark {
+  &--ravenclaw:hover {
+    border-color: $color-ravenclaw-dark;
+  }
+
+  &--hufflepuff:hover {
+    border-color: $color-hufflepuff-dark;
+  }
+
+  &--gryffindor:hover {
+    border-color: $color-gryffindor-dark;
+  }
+
+  &--slytherin:hover {
+    border-color: $color-slytherin-dark;
+  }
+}

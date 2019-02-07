@@ -1,6 +1,8 @@
 @import '../../index.scss';
 
 .filter {
+  flex: 1 1 50%;
+  margin-bottom: 1.25rem;
   padding: .31rem 1.25rem;
   font-size: .93rem;
   color: $color-black;
@@ -11,6 +13,11 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: color .3s;
+
+  @media only screen and (min-width: $bp-sm) {
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
 
   &:hover {
     color: $color-default;

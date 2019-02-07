@@ -1,38 +1,75 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
 
 .quiz {
   display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 60vh;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  @media only screen and (min-width: $bp-lg) {
+    flex-direction: row;
+  }
+
+  &__link {
+    text-align: center;
+    color: $color-white;
+    font-size: 1.62rem;
+    text-transform: uppercase;
+    font-family: $font-family-secondary;
+
+    padding: .53rem 1.25rem;
+    box-shadow: none;
+    border: 1px solid $color-white;
+    background-color: rgba($color-black, .3);
+    
+    position: absolute;
+    top: 1.87rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .3s ease;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 
   &__question-container {
-    padding: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1.25rem 2.25rem;
+    
+    @include flex-center;
     flex-basis: 50%;
 
     background-position: center;
     background-size: cover;
 
     transition: background-image .3s ease;
+
+    @media only screen and (min-width: $bp-lg) {
+      padding: 1.25rem;
+    }
   }
 
   &__answer-container {
-    padding: 1.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1.25rem 2.25rem;
+    
+    @include flex-center;
     flex-direction: column;
     flex-basis: 50%;
     
     transition: background-color .3s ease;
+
+    @media only screen and (min-width: $bp-lg) {
+      padding: 1.25rem;
+    }
   }
 
   &__question {
+    @include heading-primary;
     color: $color-white;
-    text-align: center;
-    font-weight: 300;
     font-size: 1.25rem;
   }
 }

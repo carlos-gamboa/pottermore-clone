@@ -148,7 +148,7 @@ class SpellList extends Component {
           breakClassName={'pagination__break-me'}
           pageCount={this.state.pageCount}
           marginPagesDisplayed={0}
-          pageRangeDisplayed={3}
+          pageRangeDisplayed={2}
           onPageChange={this.handlePageClick}
           containerClassName={'pagination'}
           subContainerClassName={'pagination__page pagination'}

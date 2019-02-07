@@ -1,22 +1,53 @@
 @import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/hogwarts.scss';
 
 .trait {
-  flex: 1 1 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: 1 1 100%;
+  transform: translateY(0); 
+  transition: all .3s ease;
+
+  &:not(:last-child) {
+    @media only screen and (max-width: $bp-sm) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  &:first-child,
+  &:nth-child(2) {
+    @media only screen and (max-width: $bp-lg) {
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  @media only screen and (min-width: $bp-sm) {
+    flex: 1 1 50%;
+  }
+
+  @media only screen and (min-width: $bp-lg) {
+    flex: 1 1 25%;
+  }
+  
+  @include flex-center;
   flex-direction: column;
+
+  &:hover {
+    .trait__icon-wrapper {
+      @include hogwarts-background-dark;
+    }
+    transform: translateY(-.93rem)
+  }
 
   &__icon-wrapper {
     width: 11.87rem;
     height: 10.62rem;
     margin-bottom: 2.25rem;
-    background-color: $color-default-secondary;
     clip-path: polygon(50% 0%, 100% 38%, 82% 95%, 18% 95%, 0% 38%);
+    
+    transition: background-color .3s ease;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
+    @include hogwarts-background;
   }
 
   &__icon {

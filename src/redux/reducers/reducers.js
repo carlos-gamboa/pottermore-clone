@@ -1,7 +1,8 @@
 import Actions from '../actions/actions';
 
 const INITIAL_STATE = {
-  house: 'Slytherin',
+  showHeader: true,
+  house: '',
   patronus: '',
   wand: null,
   spells: [],
@@ -80,6 +81,17 @@ const PotterReducer = (state = INITIAL_STATE, action) => {
       {
         ...state,
         houseData: action.houseData
+      }
+    );
+  }
+
+  case Actions.SET_SHOW_HEADER: {
+    return Object.assign(
+      {},
+      state,
+      {
+        ...state,
+        showHeader: action.showHeader
       }
     );
   }

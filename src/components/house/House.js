@@ -33,7 +33,6 @@ class House extends Component {
 
     let houseContent;
     if (!this.state.loadingData) {
-      console.log(houseData);
       houseContent = (house !== '') 
         ? 
         <div className='house__main'>
@@ -50,7 +49,7 @@ class House extends Component {
           <div className='house__traits-container'>
             { houseData.traits.map((trait, i) => {
               return (
-                <Trait key={i} trait={trait}></Trait>
+                <Trait key={i} trait={trait} house={house}></Trait>
               );
             })}
           </div>
