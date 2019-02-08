@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import Landing from './components/landing/Landing';
 import House from './components/house/House';
 import Patronus from './components/patronus/Patronus';
@@ -22,6 +23,7 @@ class App extends Component {
     const { house, showHeader } = this.props;
 
     const header = (showHeader) ? <Header house={house}></Header> : null;
+    const footer = (showHeader) ? <Footer /> : null;
 
     return (
       <React.Fragment>
@@ -37,6 +39,7 @@ class App extends Component {
           <PrivateRoute exact path='/spells' component={SpellList} />
           <Route component={NotFound} />
         </Switch>
+        { footer }
       </React.Fragment>
     );
   }

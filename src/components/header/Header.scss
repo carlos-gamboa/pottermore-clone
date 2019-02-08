@@ -51,9 +51,10 @@
     }
 
     &--hidden {
-      @media only screen and (max-width: $bp-md) {
-        height: 0;
-        margin-top: 0;
+      height: 0;
+      margin-top: 0;
+      @media only screen and (min-width: $bp-md) {
+        height: auto;
       }
     }
   }
@@ -91,6 +92,11 @@
 
     @media only screen and (min-width: $bp-md) {
       width: auto;
+      padding: .93rem .93rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      padding: .93rem 1.25rem;
     }
 
     &--active,

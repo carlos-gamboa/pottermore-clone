@@ -1,0 +1,14 @@
+@import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+
+.footer {
+  @include flex-center;
+  padding: 3.12rem 4.37rem;
+  background-color: $color-black;
+
+  &__disclaimer {
+    color: $color-white;
+    text-align: center;
+    font-size: .93rem;
+  }
+}
