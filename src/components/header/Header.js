@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Header.scss';
+import { connect } from 'react-redux';
 import { withRouter, NavLink } from 'react-router-dom';
+import Actions from '../../redux/actions/actions';
 import PropTypes from 'prop-types';
 
 class Header extends Component {
@@ -16,6 +18,12 @@ class Header extends Component {
     this.setState({
       checkbox: !this.state.checkbox
     });
+  }
+
+  handleLogout(event) {
+    event.preventDefault();
+    this.props.onLogout();
+    this.props.history.replace('/login');
   }
 
   getHouseClasses (baseClass) {
@@ -67,6 +75,7 @@ class Header extends Component {
             <li className='header__list-item'><NavLink to='/wand' exact activeClassName='header__link--active' className='header__link'>My wand</NavLink></li>
             <li className='header__list-item'><NavLink to='/patronus' exact activeClassName='header__link--active' className='header__link'>My Patronus</NavLink></li>
             <li className='header__list-item'><NavLink to='/spells' exact activeClassName='header__link--active' className='header__link'>Spells</NavLink></li>
+            <li className='header__list-item'><button onClick={(event) => this.handleLogout(event)} className='header__link'>Logout</button></li>
           </ul>
         </nav>
       </header>
@@ -74,8 +83,21 @@ class Header extends Component {
   }
 }
 
-Header.propTypes = {
-  house: PropTypes.string
+const mapStateToProps = () => {
+  return {};
 };
 
-export default withRouter(Header);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLogout: () => {
+      dispatch({type: Actions.LOGOUT});
+    }};
+};
+
+Header.propTypes = {
+  house: PropTypes.string,
+  onLogout: PropTypes.func,
+  history: PropTypes.object
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

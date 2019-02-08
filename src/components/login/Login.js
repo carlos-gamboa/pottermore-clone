@@ -37,7 +37,7 @@ class Login extends Component {
           showMessage: true,
           messageClass: ['register__message', 'register__message--success']
         });
-        this.setMessageTimeout();
+        this.setMessageTimeout(3000, true);
       })
       .catch((error) => {
         this.setState({
@@ -45,18 +45,21 @@ class Login extends Component {
           showMessage: true,
           messageClass: ['register__message', 'register__message--error']
         });
-        this.setMessageTimeout();
+        this.setMessageTimeout(5000, false);
       });
   };
 
-  setMessageTimeout = () => {
+  setMessageTimeout = (time, redirect) => {
     setTimeout(() => {
       this.setState({
         message: '',
         showMessage: false,
         messageClass: []
       });
-    }, 5000);
+      if (redirect) {
+        this.props.history.replace('/');
+      }
+    }, time);
   }
 
   render() {
@@ -91,8 +94,8 @@ const mapStateToProps = () => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setUser: (username) => {
-      dispatch({type: Actions.SET_USER, username});
+    setUser: (user) => {
+      dispatch({type: Actions.SET_USER, user});
     },
     setShowHeader: (showHeader) => {
       dispatch({type: Actions.SET_SHOW_HEADER, showHeader});
@@ -102,7 +105,8 @@ const mapDispatchToProps = (dispatch) => {
 
 Login.propTypes = {
   setUser: PropTypes.func,
-  setShowHeader: PropTypes.func
+  setShowHeader: PropTypes.func,
+  history: PropTypes.object
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

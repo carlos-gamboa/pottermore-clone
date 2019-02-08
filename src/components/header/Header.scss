@@ -41,11 +41,11 @@
 
   &__nav {
     width: 100%;
-    transition: height 1s ease, margin-top 1s ease;
+    transition: height 1s ease, margin-top 1.5s ease;
 
     @media only screen and (max-width: $bp-md) {
       overflow: hidden;
-      height: 16.87rem;
+      height: 20.12rem;
       margin-top: 1.87rem;
     }
 
@@ -86,6 +86,7 @@
     color: $color-white;
     font-family: $font-family-secondary;
     font-size: .93rem;
+    cursor: pointer;
     transition: border-color .5s ease, color .5s ease, background-color .5s ease;
 
     @media only screen and (min-width: $bp-md) {
