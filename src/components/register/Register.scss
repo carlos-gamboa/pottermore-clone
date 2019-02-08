@@ -27,12 +27,13 @@
   &__container {
     background-color: rgba($color-default-dark-2, .7);
     border: 2px solid rgba($color-white, .8);
-    padding: 1.87rem 2.25rem;
+    padding: .93rem 1.25rem;
     color: $color-white;
     margin: 0 2.25rem;
 
     @media only screen and (min-width: $bp-sm) {
       max-width: 32.18rem;
+      padding: 1.87rem 2.25rem;
     }
   }
 
@@ -76,9 +77,15 @@
   }
 
   &__message {
-    margin: 1.12rem 0;
+    font-size: .87rem;
+    margin: .93rem 0;
     padding: .53rem .93rem;
     text-align: center;
+
+    @media only screen and (min-width: $bp-sm) {
+      font-size: 1rem;
+      margin: 1.12rem 0;
+    }
 
     @include message-colors;
   }
