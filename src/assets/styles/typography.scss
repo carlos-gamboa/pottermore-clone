@@ -5,3 +5,17 @@
   font-weight: 300;
   text-align: center;
 }
+
+@mixin auth-title {
+  font-size: 2.12rem;
+  margin-bottom: 1.87rem;
+  letter-spacing: .6rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 2.5rem;
+  }
+}
+
+@mixin auth-text {
+
+}

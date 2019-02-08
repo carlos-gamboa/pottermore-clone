@@ -27,24 +27,36 @@
   }
 
   &__icon {
-    font-size: 4.06rem;
+    font-size: 3rem;
     color: $color-white;
+
+    @media only screen and (min-width: $bp-sm) {
+      font-size: 4.06rem;
+    }
   }
 
   &__content {
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 1.25rem 0;
+    padding: .53rem;
     
     @include flex-center;
 
     width: 100%;
+
+    @media only screen and (min-width: $bp-sm) {
+      padding: 1.25rem;
+    }
   }
 
   &__text {
     @include heading-primary;
     color: $color-white;
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      font-size: 1.25rem;
+    }
 
     @media only screen and (min-width: $bp-lg) {
       margin-top: 1.87rem;

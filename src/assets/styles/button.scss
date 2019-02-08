@@ -14,7 +14,11 @@
 
 @mixin button-md {
   padding: .62rem .93rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 1.25rem;
+  }
 }
 
 @mixin button-hamburger {

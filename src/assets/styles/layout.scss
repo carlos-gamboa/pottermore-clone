@@ -30,7 +30,12 @@
 }
 
 @mixin icon-container-big {
-  width: 100px;
-  height: 100px;
+  width: 4.37rem;
+  height: 4.37rem;
   margin-bottom: 1.87rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
 }

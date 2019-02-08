@@ -10,10 +10,18 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  margin-bottom: .93rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    margin-bottom: 1.5rem;
+  }
 
   &:last-of-type {
-    margin-bottom: 3rem;
+    margin-bottom: 1.56rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -39,5 +47,9 @@
 @mixin form-label {
   flex: 1 1 100%;
   margin-bottom: 0.93rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+
+  @media only screen and (min-width: $bp-sm) {
+    font-size: 1.25rem;
+  }
 }

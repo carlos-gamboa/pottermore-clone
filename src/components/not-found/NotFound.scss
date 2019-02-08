@@ -39,9 +39,7 @@
 
   &__title {
     @include heading-primary;
-    font-size: 2.5rem;
-    margin-bottom: 1.87rem;
-    letter-spacing: .6rem;
+    @include auth-title;
   }
 
   &__button {

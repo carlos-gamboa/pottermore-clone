@@ -20,9 +20,9 @@
     @include button-primary;
     text-align: center;
     color: $color-white;
-    font-size: 1.62rem;
+    font-size: 1rem;
 
-    padding: .53rem 1.25rem;
+    padding: .53rem .93rem;
     border: 1px solid $color-white;
     background-color: rgba($color-black, .3);
     
@@ -32,13 +32,19 @@
     transform: translateX(-50%);
     transition: background-color .3s ease;
 
+    @media only screen and (min-width: $bp-sm) {
+      padding: .53rem 1.25rem;
+      font-size: 1.62rem;
+    }
+
     &:hover {
       background-color: transparent;
     }
   }
 
-  &__question-container {
-    padding: 1.25rem 2.25rem;
+  &__question-container,
+  &__answer-container {
+    padding: 1.25rem;
     
     @include flex-center;
     flex-basis: 50%;
@@ -48,19 +54,9 @@
 
     transition: background-image .3s ease;
 
-    @media only screen and (min-width: $bp-lg) {
-      padding: 1.25rem;
+    @media only screen and (min-width: $bp-sm) {
+      padding: 1.25rem 2.25rem;
     }
-  }
-
-  &__answer-container {
-    padding: 1.25rem 2.25rem;
-    
-    @include flex-center;
-    flex-direction: column;
-    flex-basis: 50%;
-    
-    transition: background-color .3s ease;
 
     @media only screen and (min-width: $bp-lg) {
       padding: 1.25rem;
@@ -70,6 +66,10 @@
   &__question {
     @include heading-primary;
     color: $color-white;
-    font-size: 1.25rem;
+    font-size: 1rem;
+
+    @media only screen and (min-width: $bp-sm) {
+      font-size: 1.25rem;
+    }
   }
 }

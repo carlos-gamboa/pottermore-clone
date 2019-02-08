@@ -97,9 +97,9 @@ ul, ol {
   }
 
   a {
-    padding: .53rem .93rem;
-    min-height: 3.75rem;
-    min-width: 3.75rem;
+    padding: .31rem .53rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,6 +108,8 @@ ul, ol {
 
     @media screen and (min-width: $bp-sm) {
       padding: .93rem 1.25rem;
+      min-height: 3.75rem;
+      min-width: 3.75rem;
     }
   }
 
