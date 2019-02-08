@@ -1,5 +1,6 @@
 @import '../../index.scss';
 @import '../../assets/styles/layout.scss';
+@import '../../assets/styles/button.scss';
 
 .sorting {
   &__container {
@@ -26,15 +27,13 @@
   }
 
   &__button {
+    @include button;
+    @include button-primary;
     padding: .53rem 1.25rem;
-    box-shadow: none;
     border: 1px solid $color-black;
     background-color: transparent;
     color: $color-black;
-    text-transform: uppercase;
-    font-family: $font-family-secondary;
     font-size: .75rem;
-    cursor: pointer;
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 
     &:hover {

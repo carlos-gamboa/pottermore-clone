@@ -34,7 +34,7 @@
         },
         {
           "text": "Drums",
-          "points": "gryffindor"
+          "points": "slytherin"
         },
         {
           "text": "Piano",
@@ -42,7 +42,7 @@
         },
         {
           "text": "Trumpet",
-          "points": "slytherin"
+          "points": "gryffindor"
         }
       ]
     },
@@ -53,19 +53,19 @@
       "answers": [
         {
           "text": "Ordinary",
-          "points": "hufflepuff"
+          "points": "slytherin"
         },
         {
           "text": "Ignorant",
-          "points": "gryffindor"
-        },
-        {
-          "text": "Cowardly",
           "points": "ravenclaw"
         },
         {
+          "text": "Cowardly",
+          "points": "gryffindor"
+        },
+        {
           "text": "Selfish",
-          "points": "slytherin"
+          "points": "hufflepuff"
         }
       ]
     },
@@ -80,15 +80,15 @@
         },
         {
           "text": "The gleaming jet black box with a silver lock and key, marked with a mysterious rune that you know to be the mark of Merlin.",
-          "points": "gryffindor"
-        },
-        {
-          "text": "The ornate golden casket, standing on clawed feet, whose inscription warns that both secret knowledge and unbearable temptation lie within.",
           "points": "ravenclaw"
         },
         {
-          "text": "The small pewter box, unassuming and plain, with a scratched message upon it that reads 'I open only for the worthy.'",
+          "text": "The ornate golden casket, standing on clawed feet, whose inscription warns that both secret knowledge and unbearable temptation lie within.",
           "points": "slytherin"
+        },
+        {
+          "text": "The small pewter box, unassuming and plain, with a scratched message upon it that reads 'I open only for the worthy.'",
+          "points": "gryffindor"
         }
       ]
     },
@@ -99,7 +99,7 @@
       "answers": [
         {
           "text": "Hunger",
-          "points": "hufflepuff"
+          "points": "ravenclaw"
         },
         {
           "text": "Cold",
@@ -107,7 +107,7 @@
         },
         {
           "text": "Loneliness",
-          "points": "ravenclaw"
+          "points": "hufflepuff"
         },
         {
           "text": "Boredom",
@@ -126,11 +126,11 @@
       "answers": [
         {
           "text": "Every area of magic that I can",
-          "points": "hufflepuff"
+          "points": "ravenclaw"
         },
         {
           "text": "Apparition and Disapparition (being able to materialise and dematerialise at will)",
-          "points": "gryffindor"
+          "points": "hufflepuff"
         },
         {
           "text": "Transfiguration (turning one object into another object)",
@@ -138,7 +138,7 @@
         },
         {
           "text": "Flying on a broomstick",
-          "points": "slytherin"
+          "points": "gryffindor"
         },
         {
           "text": "Hexes and jinxes",
@@ -146,7 +146,7 @@
         },
         {
           "text": "All about magical creatures, and how to befriend/care for them",
-          "points": "slytherin"
+          "points": "hufflepuff"
         },
         {
           "text": "Secrets about the castle",
@@ -161,11 +161,11 @@
       "answers": [
         {
           "text": "The power to read minds",
-          "points": "hufflepuff"
+          "points": "ravenclaw"
         },
         {
           "text": "The power of invisibility",
-          "points": "gryffindor"
+          "points": "slytherin"
         },
         {
           "text": "The power of superhuman strength",
@@ -173,11 +173,11 @@
         },
         {
           "text": "The power to speak to animals",
-          "points": "slytherin"
+          "points": "hufflepuff"
         },
         {
           "text": "The power to change the past",
-          "points": "slytherin"
+          "points": "ravenclaw"
         },
         {
           "text": "The power to change your appearance at will",
@@ -195,28 +195,16 @@
           "points": "hufflepuff"
         },
         {
-          "text": "ell Professor Flitwick that he ought to ask your classmate (and resolve to tell your classmate that if he doesn't tell the truth, you will).",
+          "text": "Tell Professor Flitwick that he ought to ask your classmate (and resolve to tell your classmate that if he doesn't tell the truth, you will).",
           "points": "gryffindor"
         },
         {
           "text": "Tell Professor Flitwick the truth. If your classmate is prepared to win by cheating, he deserves to be found out. Also, as you are both in the same house, any points he loses will be regained by you, for coming first in his place.",
-          "points": "ravenclaw"
+          "points": "slytherin"
         },
         {
           "text": "You would not wait to be asked to tell Professor Flitwick the truth. If you knew that somebody was using a forbidden quill, you would tell the teacher before the exam started.",
-          "points": "slytherin"
-        },
-        {
-          "text": "Attempt to confuse the troll into letting all three of you pass without fighting?",
-          "points": "slytherin"
-        },
-        {
-          "text": "Suggest drawing lots to decide which of you will fight?",
-          "points": "slytherin"
-        },
-        {
-          "text": "Suggest that all three of you should fight (without telling the troll)?",
-          "points": "slytherin"
+          "points": "ravenclaw"
         }
       ]
     },
@@ -235,11 +223,11 @@
         },
         {
           "text": "The twisting, leaf-strewn path through woods",
-          "points": "ravenclaw"
+          "points": "slytherin"
         },
         {
           "text": "The cobbled street lined with ancient buildings",
-          "points": "slytherin"
+          "points": "ravenclaw"
         }
       ]
     },
@@ -250,7 +238,7 @@
       "answers": [
         {
           "text": "Dusk",
-          "points": "hufflepuff"
+          "points": "slytherin"
         },
         {
           "text": "Dawn",
@@ -269,7 +257,7 @@
         },
         {
           "text": "Right",
-          "points": "gryffindor"
+          "points": "ravenclaw"
         }
       ]
     },
@@ -280,19 +268,19 @@
       "answers": [
         {
           "text": "Glory",
-          "points": "hufflepuff"
+          "points": "gryffindor"
         },
         {
           "text": "Wisdom",
-          "points": "gryffindor"
+          "points": "ravenclaw"
         },
         {
           "text": "Love",
-          "points": "gryffindor"
+          "points": "hufflepuff"
         },
         {
           "text": "Power",
-          "points": "gryffindor"
+          "points": "slytherin"
         }
       ]
     },
@@ -319,15 +307,15 @@
         },
         {
           "text": "Black Cat",
-          "points": "slytherin"
+          "points": "hufflepuff"
         },
         {
           "text": "Ginger Cat",
-          "points": "slytherin"
+          "points": "gryffindor"
         },
         {
           "text": "Siamese Cat",
-          "points": "slytherin"
+          "points": "ravenclaw"
         },
         {
           "text": "Tabby Cat",
@@ -335,15 +323,15 @@
         },
         {
           "text": "White Cat",
-          "points": "slytherin"
+          "points": "hufflepuff"
         },
         {
           "text": "Common Toad",
-          "points": "slytherin"
+          "points": "gryffindor"
         },
         {
           "text": "Crested Toad",
-          "points": "slytherin"
+          "points": "ravenclaw"
         },
         {
           "text": "Harlequin Toad",
@@ -351,11 +339,11 @@
         },
         {
           "text": "Natterjack Toad",
-          "points": "slytherin"
+          "points": "hufflepuff"
         },
         {
           "text": "Western Green Toad",
-          "points": "slytherin"
+          "points": "gryffindor"
         }
       ]
     }

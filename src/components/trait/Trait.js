@@ -12,7 +12,7 @@ function Trait(props) {
     classes.push(`trait__icon-wrapper--${house.toLowerCase()}`);
   }
 
-  const traitIcon = require(`../../assets/img/traits/${trait}.svg`);
+  const traitIcon = require(`../../assets/img/icons/${trait}.svg`);
 
   return (
     <div className='trait'>

@@ -1,0 +1,51 @@
+@import '../../index.scss';
+@import '../../assets/styles/layout.scss';
+@import '../../assets/styles/typography.scss';
+@import '../../assets/styles/button.scss';
+@import '../../assets/styles/form.scss';
+
+.auth-form{
+  &__form {
+    @include flex-center;
+    flex-wrap: wrap;
+  }
+
+  &__group {
+    @include form-control
+  }
+
+  &__label {
+    @include form-label
+  }
+
+  &__input {
+    @include form-input;
+  }
+
+  &__button {
+    @include button;
+    @include button-primary;
+    @include button-md;
+
+    align-self: center;
+    border: 2px solid transparent;
+
+    background-color: $color-default-dark-2;
+    border-color: $color-white;
+
+    color: $color-white;
+
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-default-dark-2;
+    }
+
+    &:disabled {
+      background-color: $color-default-dark;
+      color: $color-background;
+      cursor: not-allowed;
+    }
+  }
+}

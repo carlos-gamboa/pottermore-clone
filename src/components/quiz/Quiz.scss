@@ -1,6 +1,7 @@
 @import '../../index.scss';
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/typography.scss';
+@import '../../assets/styles/button.scss';
 
 .quiz {
   display: flex;
@@ -15,14 +16,13 @@
   }
 
   &__link {
+    @include button;
+    @include button-primary;
     text-align: center;
     color: $color-white;
     font-size: 1.62rem;
-    text-transform: uppercase;
-    font-family: $font-family-secondary;
 
     padding: .53rem 1.25rem;
-    box-shadow: none;
     border: 1px solid $color-white;
     background-color: rgba($color-black, .3);
     

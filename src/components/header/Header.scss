@@ -37,22 +37,24 @@
 
   &__text {
     margin-bottom: 1.56rem;
+    text-align: center;
   }
 
   &__nav {
     width: 100%;
-    transition: height 1s ease, margin-top 1s ease;
+    transition: height 1s ease, margin-top 1.5s ease;
 
     @media only screen and (max-width: $bp-md) {
       overflow: hidden;
-      height: 16.87rem;
+      height: 20.12rem;
       margin-top: 1.87rem;
     }
 
     &--hidden {
-      @media only screen and (max-width: $bp-md) {
-        height: 0;
-        margin-top: 0;
+      height: 0;
+      margin-top: 0;
+      @media only screen and (min-width: $bp-md) {
+        height: auto;
       }
     }
   }
@@ -76,20 +78,25 @@
   }
 
   &__link {
-    @include flex-center;
+    @include button;
+    @include button-primary;
+
     width: 100%;
-    text-transform: uppercase;
     text-decoration: none;
     border: 3px solid transparent;
     padding: .93rem 1.25rem;
     background-color: transparent;
     color: $color-white;
-    font-family: $font-family-secondary;
     font-size: .93rem;
     transition: border-color .5s ease, color .5s ease, background-color .5s ease;
 
     @media only screen and (min-width: $bp-md) {
       width: auto;
+      padding: .93rem .93rem;
+    }
+
+    @media only screen and (min-width: $bp-lg) {
+      padding: .93rem 1.25rem;
     }
 
     &--active,
@@ -133,12 +140,9 @@
   }
 
   &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include button;
     height: 3.15rem;
     width: 3.15rem;
-    cursor: pointer;
 
 
     &:hover {

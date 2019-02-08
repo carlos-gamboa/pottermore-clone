@@ -25,6 +25,10 @@ class House extends Component {
         houseBackground: require(`../../assets/img/${this.props.house.toLowerCase()}/house-background.jpg`),
         loadingData: false
       });
+    } else {
+      this.setState({
+        loadingData: false
+      });
     }
   }
 
@@ -58,9 +62,6 @@ class House extends Component {
         <div className='house__container'>
           <div className='house__title-container'>
             <h2 className='house__title'>Your Hogwarts House</h2>
-          </div>
-          <div className='house__middle-container'>
-            <p className='house__middle-text'>Or</p>
           </div>
           <div className='house__ceremony-container'>
             <p className='house__ceremony-title'>The Sorting Ceremony</p>

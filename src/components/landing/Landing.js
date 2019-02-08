@@ -41,12 +41,12 @@ class Landing extends Component {
   }
 
   getCardTitle(value, title) {
-    const newTitle = (value !== '') ? `My ${title}` : '';
+    const newTitle = (value !== '' && value !== null) ? `My ${title}` : '';
     return newTitle;
   }
 
   getCardButtonText(value, buttonText) {
-    const newButtonText = (value !== '') ? `More about my ${buttonText}` : `Discover your ${buttonText}`;
+    const newButtonText = (value !== '' && value !== null) ? `More about my ${buttonText}` : `Discover your ${buttonText}`;
     return newButtonText;
   }
 
@@ -100,7 +100,6 @@ class Landing extends Component {
 
     return backgroundImage;
   }
-
 
   render() {
     const { cards } = this.state;

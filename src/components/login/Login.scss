@@ -1,6 +1,7 @@
 @import '../../index.scss';
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/typography.scss';
+@import '../../assets/styles/messages.scss';
 
 .login {
   @include flex-center;
@@ -10,13 +11,10 @@
   width: 100vw;
   background-color: $color-default-dark-2;
   background-image: url('../../assets/img/auth/login-background.jpg');
-  background-position: center;
-  background-size: cover;
+  @include banner;
 
   &__icon-container {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1.87rem;
+    @include icon-container-big;
   }
 
   &__icon {
@@ -44,73 +42,36 @@
     letter-spacing: .6rem;
   }
 
-  &__form {
-    @include flex-center;
-    flex-wrap: wrap;
+  &__text {
+    text-align: center;
+    margin-top: 1.87rem;
   }
 
-  &__group {
-    flex: 1 1 100%;
-    max-width: 25rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+  &__link {
+    color: $color-default-light;
+    margin-left: .53rem;
+    font-size: 1.12rem;
 
-    &:last-of-type {
-      margin-bottom: 3rem;
-    }
+    transition: color .3s ease;
   }
 
-  &__label {
-    flex: 1 1 100%;
-    margin-bottom: 0.93rem;
-    font-size: 1.25rem;
+  &__link:link,
+  &__link:visited {
+    text-decoration: underline;
+    color: $color-default-light;
   }
 
-  &__input {
-    flex: 1 1 100%;
-    width: 100%;
-    background-color: $color-default-dark-2;
-    color: $color-white;
-
-    border: 2px solid $color-white;
-    box-shadow: none;
-    padding: 0.62rem 0.93rem;
-
-    font-size: 1rem;
-    font-family: $font-family-primary;
-
-    &:focus {
-      background-color: $color-white;
-      color: $color-default-dark-2;
-    }
+  &__link:hover,
+  &__link:active {
+    color: $color-background;
   }
 
-  &__button {
-    @include flex-center;
-    align-self: center;
-    border: 2px solid transparent;
-    box-shadow: none;
-    padding: .62rem .93rem;
-    cursor: pointer;
-    font-size: 1.25rem;
+  &__message {
+    margin: 1.12rem 0;
+    padding: .53rem .93rem;
+    text-align: center;
 
-    background-color: $color-default-dark-2;
-    border-color: $color-white;
-
-    text-transform: uppercase;
-    font-family: $font-family-secondary;
-    color: $color-white;
-
-    transition: all .3s ease;
-
-    &:hover {
-      background-color: $color-white;
-      color: $color-default-dark-2;
-    }
-
-    &:disabled {
-    }
+    @include message-colors;
   }
+
 }
