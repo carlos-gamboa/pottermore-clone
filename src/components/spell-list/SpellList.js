@@ -104,6 +104,8 @@ class SpellList extends Component {
   render() {
     const { spellsToShow, filters, activeFilter } = this.state;
     const { house } = this.props;
+    const paginateActiveClass = `pagination__page--${house.toLowerCase()}`;
+
     return (
       <section className='spell-list'>
         <div className='spell-list__introduction'>
@@ -148,11 +150,11 @@ class SpellList extends Component {
           breakClassName={'pagination__break-me'}
           pageCount={this.state.pageCount}
           marginPagesDisplayed={0}
-          pageRangeDisplayed={2}
+          pageRangeDisplayed={1}
           onPageChange={this.handlePageClick}
           containerClassName={'pagination'}
           subContainerClassName={'pagination__page pagination'}
-          activeClassName={'pagination__page--active'}
+          activeClassName={paginateActiveClass}
         />
       </section>
     );

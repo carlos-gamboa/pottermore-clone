@@ -20,6 +20,11 @@ class Login extends Component {
   }
 
   componentDidMount() {
+    const user = sessionStorage.getItem('user');
+    if (user) {
+      this.props.setUser(user);
+      this.props.history.replace('/');
+    }
     this.props.setShowHeader(false);
   }
 
@@ -63,7 +68,7 @@ class Login extends Component {
   }
 
   render() {
-    const traitIcon = require('../../assets/img/traits/individuality.svg');
+    const traitIcon = require('../../assets/img/icons/individuality.svg');
     const { message, showMessage, messageClass } = this.state;
     const displayMessage = (showMessage) 
       ?
@@ -81,7 +86,7 @@ class Login extends Component {
           <h1 className='login__title'>Login</h1>
           <AuthForm buttonText='Enter Hogwarts' onSubmit={this.handleSubmit.bind(this)}></AuthForm>
           { displayMessage }
-          <p className='login__text'>Not registered to Hogwarts? <Link to='/register' className='login__link'>Apply Now</Link></p>
+          <p className='login__text'>Not registered? <Link to='/register' className='login__link'>Apply Now</Link></p>
         </div>
       </section>
     );

@@ -13,8 +13,11 @@ import Sorting from './components/sorting/Sorting';
 import SpellList from './components/spell-list/SpellList';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
+import PrivateRoute from './components/private-route/PrivateRoute';
+import NotFound from './components/not-found/NotFound';
 
 class App extends Component {
+  
   render() {
     const { house, showHeader } = this.props;
 
@@ -24,15 +27,15 @@ class App extends Component {
       <React.Fragment>
         { header }
         <Switch>
-          <Route exact path='/' component={Landing} />
+          <PrivateRoute exact path='/' component={Landing} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
-          <Route exact path='/house' component={House}/>
-          <Route exact path='/patronus' component={Patronus} />
-          <Route exact path='/wand' component={Wand} />
-          <Route exact path='/sorting' component={Sorting} />
-          <Route exact path='/spells' component={SpellList} />
-          <Route render={() => <h1 className='heading__primary' style={{marginTop: '10rem'}}>404 NOT FOUND</h1>}></Route>
+          <PrivateRoute exact path='/house' component={House}/>
+          <PrivateRoute exact path='/patronus' component={Patronus} />
+          <PrivateRoute exact path='/wand' component={Wand} />
+          <PrivateRoute exact path='/sorting' component={Sorting} />
+          <PrivateRoute exact path='/spells' component={SpellList} />
+          <Route component={NotFound} />
         </Switch>
       </React.Fragment>
     );

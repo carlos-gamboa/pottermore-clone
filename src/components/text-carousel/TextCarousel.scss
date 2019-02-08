@@ -1,6 +1,7 @@
 @import '../../index.scss';
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/typography.scss';
+@import '../../assets/styles/button.scss';
 
 .text-carousel {
   display: flex;
@@ -20,10 +21,9 @@
   }
 
   &__arrow {
+    @include button;
     border: none;
-    text-shadow: none;
     background-color: transparent;
-    cursor: pointer;
   }
 
   &__icon {
@@ -63,15 +63,13 @@
   }
 
   &__button {
+    @include button;
+    @include button-primary;
     padding: .53rem 1.25rem;
-    box-shadow: none;
     border: 1px solid $color-white;
     background-color: transparent;
     color: $color-white;
-    text-transform: uppercase;
-    font-family: $font-family-secondary;
     font-size: .93rem;
-    cursor: pointer;
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 
     &:hover {

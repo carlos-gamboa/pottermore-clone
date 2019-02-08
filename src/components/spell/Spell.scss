@@ -2,6 +2,7 @@
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/hogwarts.scss';
 @import '../../assets/styles/typography.scss';
+@import '../../assets/styles/button.scss';
 
 .spell {
   background-color: $color-white;
@@ -9,7 +10,7 @@
   margin-bottom: 1.56rem;
   display: flex;
   flex-direction: column;
-  height: 19.18rem;
+  height: 20rem;
 
   @media screen and (min-width: $bp-sm) {
     flex-basis: calc(50% - 1.1rem);
@@ -29,14 +30,13 @@
     }
   }
 
-  
-
   &__title {
     background-color: $color-default;
     min-height: 8.75rem;
     padding: 1.87rem 2.5rem;
 
     @include flex-center;
+    flex-direction: column;
 
     color: $color-white;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 57% 100%, 50% 85%, 43% 100%, 0 100%);
@@ -46,7 +46,12 @@
 
   &__name {
     @include heading-primary;
-    font-size: 1.87rem;
+    font-size: 1.53rem;
+    margin-bottom: 1.12rem;
+
+    @media only screen and (min-width: $bp-md) {
+      font-size: 1.87rem;
+    }
   }
 
   &__info {
@@ -58,16 +63,23 @@
   }
 
   &__type { 
+    @include button-primary;
     font-size: .93rem;
     color: $color-black;
     margin-bottom: 1.25rem;
-    font-family: $font-family-secondary;
-    text-transform: uppercase;
   }
 
   &__effect {
     text-transform: capitalize;
     text-align: center;
     font-size: 1.12rem;
+  }
+
+  &__icon {
+    width: 4.06rem;
+    height: 4.06rem;
+    color: white;
+
+    margin-bottom: 1.12rem;
   }
 }

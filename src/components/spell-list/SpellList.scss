@@ -17,20 +17,19 @@
   }
 
   &__introduction {
+    @include banner;
+    @include banner-sm;
     margin-bottom: 1.87rem;
-    padding: 1.87rem 2.25rem;
-    color: $color-white;
     background-image: url('../../assets/img/landing/wand-background.jpg');
-    background-position: center;
-    background-size: cover;
+    
 
     @media only screen and (min-width: $bp-md) {
-      padding: 2.5rem 3.75rem;
+      @include banner-md;
       margin-bottom: 5rem;
     }
 
     @media only screen and (min-width: $bp-xl) {
-      padding: 6.25rem 10.93rem;
+      @include banner-lg;
     }
   }
 

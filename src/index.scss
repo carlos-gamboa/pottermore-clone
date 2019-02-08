@@ -111,7 +111,19 @@ ul, ol {
     }
   }
 
-  li.pagination__page--active {
-    color: $color-default-light;
+  li.pagination__page--ravenclaw {
+    color: $color-ravenclaw;
+  }
+
+  li.pagination__page--gryffindor {
+    color: $color-gryffindor;
+  }
+
+  li.pagination__page--slytherin {
+    color: $color-slytherin;
+  }
+
+  li.pagination__page--hufflepuff {
+    color: $color-hufflepuff;
   }
 }

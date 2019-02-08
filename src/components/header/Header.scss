@@ -37,6 +37,7 @@
 
   &__text {
     margin-bottom: 1.56rem;
+    text-align: center;
   }
 
   &__nav {
@@ -76,17 +77,16 @@
   }
 
   &__link {
-    @include flex-center;
+    @include button;
+    @include button-primary;
+
     width: 100%;
-    text-transform: uppercase;
     text-decoration: none;
     border: 3px solid transparent;
     padding: .93rem 1.25rem;
     background-color: transparent;
     color: $color-white;
-    font-family: $font-family-secondary;
     font-size: .93rem;
-    cursor: pointer;
     transition: border-color .5s ease, color .5s ease, background-color .5s ease;
 
     @media only screen and (min-width: $bp-md) {
@@ -134,12 +134,9 @@
   }
 
   &__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include button;
     height: 3.15rem;
     width: 3.15rem;
-    cursor: pointer;
 
 
     &:hover {

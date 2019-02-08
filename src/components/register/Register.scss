@@ -1,6 +1,7 @@
 @import '../../index.scss';
 @import '../../assets/styles/layout.scss';
 @import '../../assets/styles/typography.scss';
+@import '../../assets/styles/messages.scss';
 
 .register {
   @include flex-center;
@@ -14,9 +15,7 @@
   background-size: cover;
 
   &__icon-container {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1.87rem;
+    @include icon-container-big;
   }
 
   &__icon {
@@ -73,17 +72,7 @@
     padding: .53rem .93rem;
     text-align: center;
 
-    &--success {
-      border: 1px solid $color-success-dark;
-      background-color: $color-success;
-      color: $color-success-dark;
-    }
-
-    &--error {
-      border: 1px solid $color-error-dark;
-      background-color: $color-error;
-      color: $color-error-dark;
-    }
+    @include message-colors;
   }
 
 }

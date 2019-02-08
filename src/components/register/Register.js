@@ -69,7 +69,7 @@ class Register extends Component {
   }
 
   render() {
-    const traitIcon = require('../../assets/img/traits/mail.svg');
+    const traitIcon = require('../../assets/img/icons/mail.svg');
     const { message, showMessage, messageClass } = this.state;
     const displayMessage = (showMessage) 
       ?
